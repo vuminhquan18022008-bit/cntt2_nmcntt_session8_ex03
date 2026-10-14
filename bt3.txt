@@ -1,0 +1,9 @@
+Phần 1: 
+Sơ đồ 
+Stdout: máy tính sẽ nhận câu lệnh cat để đọc lệnh
+Pipe : đẩy dữ liệu từ stdout qua stdin 
+Stdout: nhận dữ liệu và chỉ giữ lại các dòng có “timeout” 
+Pipe : đẩy các danh sách vừa lọc qua stdin
+Đếm kết quả  
+Phần 2: triển khai 
+Câu lệnh : ((cat app.log | Select-String  "TIMEOUT") | Where-Object { $_ -notmatch "NOT TIMEOUT" }).Count
